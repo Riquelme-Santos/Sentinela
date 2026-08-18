@@ -1,0 +1,280 @@
+/* ========================================
+   HOSPITAL VG — TELA DE ATENDIMENTO
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf6f5 0%,
+            #f8fbfb 50%,
+            #e8f2f5 100%
+        );
+
+    color: #294547;
+}
+
+/* ========================================
+   DECORAÇÃO DO FUNDO
+   ======================================== */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    width: 430px;
+    height: 430px;
+
+    border-radius: 50%;
+
+    background: rgba(38, 143, 134, 0.07);
+
+    top: -190px;
+    left: -150px;
+
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    background: rgba(23, 107, 112, 0.06);
+
+    right: -140px;
+    bottom: -170px;
+
+    z-index: -1;
+}
+
+/* ========================================
+   CARD PRINCIPAL
+   ======================================== */
+
+.container {
+    width: 450px;
+    max-width: 92%;
+
+    padding: 38px;
+
+    background: #ffffff;
+
+    border: 1px solid #dcebea;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 50px rgba(30, 70, 70, 0.10),
+        0 4px 12px rgba(30, 70, 70, 0.05);
+}
+
+/* ========================================
+   TÍTULO
+   ======================================== */
+
+.container h2 {
+    text-align: center;
+
+    color: #176b70;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.container h2::after {
+    content: "Cadastro de paciente";
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: #84999a;
+
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* ========================================
+   CAMPOS
+   ======================================== */
+
+.container input,
+.container select {
+    width: 100%;
+
+    height: 50px;
+
+    margin-top: 16px;
+
+    padding: 0 15px;
+
+    border: 1px solid #d6e4e3;
+
+    border-radius: 9px;
+
+    background: #f9fcfc;
+
+    color: #294547;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.container input::placeholder {
+    color: #9aaead;
+}
+
+.container input:focus,
+.container select:focus {
+    border-color: #29958b;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(41, 149, 139, 0.12);
+}
+
+/* ========================================
+   SELECT
+   ======================================== */
+
+.container select {
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+/* ========================================
+   CAMPO DE FOTO
+   ======================================== */
+
+.container input[type="file"] {
+    height: auto;
+
+    padding: 12px 14px;
+
+    background: #f5f9f9;
+
+    cursor: pointer;
+
+    color: #607778;
+}
+
+.container input[type="file"]::file-selector-button {
+    border: none;
+
+    padding: 8px 12px;
+
+    margin-right: 10px;
+
+    border-radius: 7px;
+
+    background: #e1f1ef;
+
+    color: #176b70;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.container input[type="file"]::file-selector-button:hover {
+    background: #d1eae7;
+}
+
+/* ========================================
+   BOTÃO CADASTRAR
+   ======================================== */
+
+.container button {
+    width: 100%;
+
+    height: 50px;
+
+    margin-top: 22px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #238f83;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 14px rgba(35, 143, 131, 0.22);
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+.container button:hover {
+    background: #19766c;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 18px rgba(35, 143, 131, 0.28);
+}
+
+.container button:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+   RESPONSIVO
+   ======================================== */
+
+@media (max-width: 500px) {
+
+    .container {
+        padding: 28px 22px;
+    }
+
+    .container h2 {
+        font-size: 23px;
+    }
+}

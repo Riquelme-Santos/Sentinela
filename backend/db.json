@@ -1,0 +1,59 @@
+{
+  "usuarios": [
+    {
+      "usuario": "triagem",
+      "senha": "123",
+      "tipo": "triagem"
+    },
+    {
+      "usuario": "medico",
+      "senha": "123",
+      "tipo": "medico"
+    },
+    {
+      "usuario": "atendimento",
+      "senha": "123",
+      "tipo": "atendimento"
+    }
+  ],
+  "pacientes": [
+    {
+      "id": 1786979226522,
+      "nome": "Zaroy",
+      "cpf": "123415436565",
+      "tipo": "Convenio",
+      "status": "triagem",
+      "createdAt": "2026-08-17T15:07:06.522Z"
+    }
+  ],
+  "triagens": [
+    {
+      "id": 1786979166843,
+      "nome": "zaroy",
+      "sintoma": "dor_leve",
+      "temperatura": 60,
+      "alergia": "herpes",
+      "observacao": "coceira",
+      "risco": "vermelho",
+      "status": "aguardando_medico",
+      "createdAt": "2026-08-17T15:06:06.843Z"
+    }
+  ],
+  "consultas": [],
+  "tv_chamada": {
+    "id": "1786979241361",
+    "localTipo": "GUICHÊ",
+    "localNumero": "01",
+    "paciente": "Zaroy",
+    "hora": "12:07"
+  },
+  "tv_historico": [
+    {
+      "id": "1786979241361",
+      "localTipo": "GUICHÊ",
+      "localNumero": "01",
+      "paciente": "Zaroy",
+      "hora": "12:07"
+    }
+  ]
+}

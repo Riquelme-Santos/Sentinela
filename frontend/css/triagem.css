@@ -1,0 +1,414 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #edf7f6, #f8fbfb, #edf5f7);
+  color: #294547;
+}
+
+/* CONTAINER */
+
+.container {
+  width: min(1050px, 94%);
+  margin: 35px auto;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #dcebea;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(30, 70, 70, 0.08);
+}
+
+/* CABEÇALHO */
+
+.container > div:first-child {
+  border-bottom: 1px solid #e3eceb;
+  padding-bottom: 20px;
+}
+
+.container h2 {
+  color: #176b70;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+/* BOTÃO DA TV */
+
+.btn-abrir-tv {
+  background: #176b70 !important;
+  color: white;
+  border: none !important;
+  padding: 11px 17px !important;
+  border-radius: 9px !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-abrir-tv:hover {
+  background: #12585c !important;
+  transform: translateY(-1px);
+}
+
+/* FILA DE PACIENTES */
+
+.pacientes-fila {
+  margin: 25px 0 30px !important;
+  padding: 20px !important;
+
+  background: #f1f8f7 !important;
+
+  border: 1px solid #d7e9e7 !important;
+
+  border-radius: 12px !important;
+}
+
+.pacientes-fila h3 {
+  margin: 0 0 17px !important;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #315658 !important;
+
+  font-size: 17px;
+}
+
+.pacientes-fila h3 span {
+  color: #829596 !important;
+
+  font-size: 11px !important;
+
+  font-weight: 400 !important;
+}
+
+/* ITEM DA FILA */
+
+.fila-item {
+  display: flex !important;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  background: #ffffff !important;
+
+  border: 1px solid #dce9e8 !important;
+
+  border-radius: 10px !important;
+
+  padding: 13px 15px !important;
+
+  margin-bottom: 9px !important;
+
+  box-shadow: 0 3px 10px rgba(35, 75, 75, 0.04);
+
+  transition: 0.2s ease;
+}
+
+.fila-item:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 6px 15px rgba(35, 75, 75, 0.07);
+}
+
+.fila-item strong {
+  color: #294547;
+
+  font-size: 14px;
+}
+
+.fila-item small {
+  display: inline-block;
+
+  margin-top: 4px;
+
+  color: #829596 !important;
+
+  font-size: 11px !important;
+}
+
+/* BOTÃO CHAMAR TV */
+
+.btn-tv {
+  background: #176b70 !important;
+
+  color: white;
+
+  border: none !important;
+
+  padding: 9px 14px !important;
+
+  border-radius: 8px !important;
+
+  cursor: pointer;
+
+  font-size: 12px !important;
+
+  font-weight: 600;
+
+  margin-left: 8px;
+
+  transition: 0.2s ease;
+}
+
+.btn-tv:hover {
+  background: #12585c !important;
+
+  transform: translateY(-1px);
+}
+
+/* BOTÃO ATUALIZAR */
+
+.pacientes-fila > button {
+  background: #6f8586 !important;
+
+  color: white;
+
+  border: none !important;
+
+  padding: 8px 13px !important;
+
+  border-radius: 7px !important;
+
+  cursor: pointer;
+
+  font-size: 12px !important;
+
+  transition: 0.2s ease;
+}
+
+.pacientes-fila > button:hover {
+  background: #536b6c !important;
+}
+
+/* DIVISÓRIA */
+
+hr {
+  border: none;
+
+  height: 1px;
+
+  background: #e3eceb;
+
+  margin: 30px 0;
+}
+
+/* TÍTULO FORMULÁRIO */
+
+.container > h3 {
+  color: #176b70;
+
+  font-size: 20px;
+
+  margin-bottom: 16px;
+}
+
+/* CAMPOS */
+
+#nome,
+#sintoma,
+#temp,
+#alergia,
+#observacao {
+  width: 100%;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  color: #294547;
+
+  background: #f9fcfc;
+
+  border: 1px solid #d6e4e3;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+#nome,
+#sintoma,
+#temp,
+#alergia {
+  height: 48px;
+
+  padding: 0 14px;
+
+  margin-bottom: 12px;
+}
+
+#observacao {
+  min-height: 110px;
+
+  padding: 14px;
+
+  resize: vertical;
+
+  margin-bottom: 15px;
+}
+
+#nome:focus,
+#sintoma:focus,
+#temp:focus,
+#alergia:focus,
+#observacao:focus {
+  border-color: #29958b;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(41, 149, 139, 0.10);
+}
+
+#nome::placeholder,
+#temp::placeholder,
+#alergia::placeholder,
+#observacao::placeholder {
+  color: #9aaead;
+}
+
+/* RESULTADO DA TRIAGEM */
+
+#resultado {
+  margin: 5px 0 15px;
+
+  padding: 13px;
+
+  border-radius: 9px;
+
+  text-align: center;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+#resultado.verde {
+  background: #e4f5eb;
+
+  color: #27805e;
+
+  border: 1px solid #c8e8d7;
+}
+
+#resultado.amarelo {
+  background: #fff4d7;
+
+  color: #9a7112;
+
+  border: 1px solid #f2dfaa;
+}
+
+#resultado.vermelho {
+  background: #fde6e6;
+
+  color: #c23d3d;
+
+  border: 1px solid #f2caca;
+}
+
+/* BOTÃO SALVAR */
+
+.container > button:last-child {
+  width: 100%;
+
+  height: 50px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #238f83;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 14px rgba(35, 143, 131, 0.20);
+
+  transition: 0.2s ease;
+}
+
+.container > button:last-child:hover {
+  background: #19766c;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(35, 143, 131, 0.27);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+
+  .container {
+    width: 94%;
+
+    margin: 20px auto;
+
+    padding: 20px;
+  }
+
+  .container > div:first-child {
+    flex-direction: column;
+
+    align-items: stretch !important;
+  }
+
+  .btn-abrir-tv {
+    width: 100%;
+  }
+
+  .pacientes-fila h3 {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .fila-item {
+    flex-direction: column;
+
+    align-items: stretch !important;
+  }
+
+  .fila-item .btn-tv {
+    width: 100%;
+
+    margin-left: 0;
+  }
+
+  #nome,
+  #sintoma,
+  #temp,
+  #alergia {
+    height: 46px;
+  }
+}
+

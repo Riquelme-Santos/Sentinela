@@ -4,17 +4,29 @@ O Sentinela é um sistema de gerenciamento hospitalar desenvolvido para otimizar
 
 A plataforma foi desenvolvida com o objetivo de tornar o atendimento mais ágil, organizado e eficiente, permitindo acompanhar o paciente desde seu cadastro inicial até a consulta médica.
 
+
 🚀 Funcionalidades
+
 🔐 Autenticação de usuários
+
 👤 Cadastro de pacientes
+
 🩺 Triagem de pacientes
+
 🚦 Classificação de risco
+
 👨‍⚕️ Atendimento médico
+
 💊 Gerenciamento de medicações
+
 📺 Chamada de pacientes
+
 🔄 Integração entre os módulos do sistema
+
 💾 Armazenamento de dados
+
 🔄 Fluxo do sistema
+
 
 Cadastro → Triagem → Classificação de risco → Atendimento médico → Registro da consulta
 
